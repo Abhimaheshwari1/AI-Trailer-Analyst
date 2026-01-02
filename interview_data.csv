@@ -1,0 +1,12 @@
+Timestamp,Trailer Title,Question,User Answer,Status,AI Feedback
+2026-01-02 14:25:52,The Lion King (2019),What was this movie trailer about?,the movie is about the lions ,PASS,Good job.
+2026-01-02 14:25:59,The Lion King (2019),What did you like specifically in this video?,dsgsdfrgdfsg,FAIL,Gibberish Please type a meaningful answer.
+2026-01-02 14:26:22,The Lion King (2019),What did you like specifically in this video?,the lion and the forest  ,FAIL,Grammar Error Your sentence is grammatically incorrect. Please write a proper sentence.
+2026-01-02 14:26:42,The Lion King (2019),What did you like specifically in this video?,i love whole trailor ,PASS,Good job.
+2026-01-02 14:27:02,The Lion King (2019),What was the most memorable scene?,when lion  roar  i love that part ,FAIL,Grammar Error Your sentence is grammatically incorrect. Please write a proper sentence.
+2026-01-02 14:27:27,The Lion King (2019),What was the most memorable scene?,i love the  roar part ,PASS,Good job.
+2026-01-02 14:36:33,Oppenheimer,What was this movie trailer about?,the movie is about the bomb and the destruction of the japan  ,PASS,Good job.
+2026-01-02 14:37:44,Oppenheimer,What did you like specifically in this video?,i like the hero and the actions in the trailor ,PASS,Good job.
+2026-01-02 14:37:51,Oppenheimer,What was the most memorable scene?,rgoderfge,FAIL,Gibberish Please type a meaningful answer.
+2026-01-02 14:38:09,Oppenheimer,What was the most memorable scene?,when bomb  blast i love that part ,FAIL,Grammar Error Your sentence is grammatically incorrect. Please write a proper sentence.
+2026-01-02 14:38:38,Oppenheimer,What was the most memorable scene?,when hero drives the car ,FAIL,Grammar Error Your sentence is grammatically incorrect. Please write a proper sentence.

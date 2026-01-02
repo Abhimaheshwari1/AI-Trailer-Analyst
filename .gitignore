@@ -1,2 +1,7 @@
+# Ignore the secrets file so it never goes to GitHub
+.streamlit/secrets.toml
 .env
+
+# Ignore Python cache files
 __pycache__/
+*.pyc
