@@ -6,13 +6,13 @@ import os
 from datetime import datetime
 
 # ==========================================
-#  SECURE API KEY CONFIGURATION
+# 🔑 SECURE API KEY CONFIGURATION
 # ==========================================
 try:
     # Tries to get key from secrets file
     GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 except (FileNotFoundError, KeyError):
-    st.error(" Missing API Key!")
+    st.error("🚨 Missing API Key!")
     st.info("Please create a folder named .streamlit and a file named secrets.toml with GOOGLE_API_KEY='...'")
     st.stop()
 
@@ -26,7 +26,7 @@ except Exception as e:
 st.set_page_config(page_title="AI Video Interviewer", layout="centered")
 
 # ==========================================
-#  DATA: 10 MOVIE TRAILERS
+# 🎬 DATA: 10 MOVIE TRAILERS
 # ==========================================
 TRAILER_DB = [
     {
@@ -98,7 +98,7 @@ QUESTIONS = [
 ]
 
 # ==========================================
-#  CSV LOGGING FUNCTION
+# 💾 CSV LOGGING FUNCTION
 # ==========================================
 CSV_FILE_PATH = 'interview_data.csv'
 
@@ -116,7 +116,7 @@ def log_to_csv(data_row):
         writer.writerow(data_row)
 
 # ==========================================
-#  AI LOGIC (Grammar & Context Check)
+# 🧠 AI LOGIC (Grammar & Context Check)
 # ==========================================
 def validate_answer(user_answer, question, video_context, retry_count):
     
@@ -179,7 +179,7 @@ def validate_answer(user_answer, question, video_context, retry_count):
         return {"status": "ERROR", "message": f"API Error: {str(e)}"}
 
 # ==========================================
-#  UI LOGIC
+# 🖥️ UI LOGIC
 # ==========================================
 if 'step' not in st.session_state:
     st.session_state.step = "start"
@@ -245,10 +245,10 @@ elif isinstance(st.session_state.step, int):
         # -------------------
 
         if result['status'] == "ERROR":
-            st.error(f" {result['message']}")
+            st.error(f"❌ {result['message']}")
             
         elif result['status'] == "PASS":
-            st.session_state.chat_history.append(("assistant", f" {result['message']}"))
+            st.session_state.chat_history.append(("assistant", f"✅ {result['message']}"))
             st.session_state.retry_count = 0
             if q_index < len(QUESTIONS) - 1:
                 st.session_state.step += 1
@@ -258,7 +258,7 @@ elif isinstance(st.session_state.step, int):
             
         else: # FAIL
             if st.session_state.retry_count >= 2:
-                st.session_state.chat_history.append(("assistant", " Moving on due to repeated errors."))
+                st.session_state.chat_history.append(("assistant", "❌ Moving on due to repeated errors."))
                 st.session_state.retry_count = 0
                 if q_index < len(QUESTIONS) - 1:
                     st.session_state.step += 1
@@ -266,7 +266,7 @@ elif isinstance(st.session_state.step, int):
                     st.session_state.step = "end"
             else:
                 st.session_state.retry_count += 1
-                st.session_state.chat_history.append(("assistant", f" {result['message']}"))
+                st.session_state.chat_history.append(("assistant", f"⚠️ {result['message']}"))
             st.rerun()
 
 elif st.session_state.step == "end":
