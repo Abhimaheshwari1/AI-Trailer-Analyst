@@ -26,7 +26,7 @@ except Exception as e:
 st.set_page_config(page_title="AI Video Interviewer", layout="centered")
 
 # ==========================================
-# 🎬 DATA: 10 TRAILERS (DETAILED CONTEXT & FIXED URLS)
+#  DATA: 10 TRAILERS (DETAILED CONTEXT & FIXED URLS)
 # ==========================================
 TRAILER_DB = [
     {
@@ -317,7 +317,7 @@ if 'retry_count' not in st.session_state:
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
 
-st.title("🎬 AI Trailer Analyst")
+st.title(" AI Trailer Analyst")
 
 # STEP 1: START
 if st.session_state.step == "start":
@@ -393,7 +393,7 @@ elif isinstance(st.session_state.step, int):
                     st.session_state.step = "end"
             else:
                 st.session_state.retry_count += 1
-                st.session_state.chat_history.append(("assistant", f"⚠️ {result['message']}"))
+                st.session_state.chat_history.append(("assistant", f" {result['message']}"))
             st.rerun()
 
 elif st.session_state.step == "end":
