@@ -10,3 +10,91 @@ Timestamp,Trailer Title,Question,User Answer,Status,AI Feedback
 2026-01-02 14:37:51,Oppenheimer,What was the most memorable scene?,rgoderfge,FAIL,Gibberish Please type a meaningful answer.
 2026-01-02 14:38:09,Oppenheimer,What was the most memorable scene?,when bomb  blast i love that part ,FAIL,Grammar Error Your sentence is grammatically incorrect. Please write a proper sentence.
 2026-01-02 14:38:38,Oppenheimer,What was the most memorable scene?,when hero drives the car ,FAIL,Grammar Error Your sentence is grammatically incorrect. Please write a proper sentence.
+2026-01-03 09:23:45,Avengers: Endgame,What was this movie trailer about?,edfterwtgf,FAIL,Gibberish Please type a meaningful answer.
+2026-01-03 11:29:29,Top Gun: Maverick,What was this movie trailer about?,THE MOVIE  IS  ABOUT Racing and bike,FAIL,Irrelevant That doesn't match the video content.
+2026-01-03 11:46:43,The Lion King (2019),What was this movie trailer about?,dsfhgfvdshgfisd,ERROR,"API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 15.610930422s. [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-2.5-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 15
+}
+]"
+2026-01-03 11:51:29,Interstellar,What was this movie trailer about?,dsfgdsfgdsf,ERROR,"API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 29.933674691s. [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-2.5-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 29
+}
+]"
+2026-01-03 11:53:02,Avengers: Endgame,What was this movie trailer about?,the trailor is about avengers and howe they protect  the world ,ERROR,"API Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 57.003495576s. [links {
+  description: ""Learn more about Gemini API quotas""
+  url: ""https://ai.google.dev/gemini-api/docs/rate-limits""
+}
+, violations {
+  quota_metric: ""generativelanguage.googleapis.com/generate_content_free_tier_requests""
+  quota_id: ""GenerateRequestsPerDayPerProjectPerModel-FreeTier""
+  quota_dimensions {
+    key: ""model""
+    value: ""gemini-2.5-flash""
+  }
+  quota_dimensions {
+    key: ""location""
+    value: ""global""
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 57
+}
+]"
+2026-01-03 12:10:24,The Lion King (2019),What was this movie trailer about?,the movie trailor is about lion king,ERROR,"API Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+2026-01-03 12:11:15,The Batman (2022),What was this movie trailer about?,dsgfdrefghrdf,ERROR,"API Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+2026-01-03 12:48:54,Spider-Man: No Way Home,What was this movie trailer about?,dxfgdfhdf,ERROR,All AI models failed. Please check your API Key.
+2026-01-03 12:59:02,Barbie (2023),What was this movie trailer about?,gdfghdfgds,ERROR,All AI models failed. Please check your API Key.
+2026-01-03 13:34:30,Spider-Man: No Way Home,What was this movie trailer about?,dsfsdgds,ERROR,⚠️ Quota limit. Please wait 1 minute.
+2026-01-03 13:37:43,Spider-Man: No Way Home,What was this movie trailer about?,ghjgfjhfyythrt,ERROR,⚠️ Quota limit. Please wait 1 minute.
+2026-01-03 13:49:49,Oppenheimer,What was this movie trailer about?,THIS MOVIE IS ABOUT THE FIRST ATOM BOMB,ERROR,⚠️ Quota limit. Please wait 1 minute.
+2026-01-03 13:50:39,Spider-Man: No Way Home,What was this movie trailer about?,HGJGHYJ,ERROR,⚠️ Quota limit. Please wait 1 minute.
+2026-01-03 13:51:38,Top Gun: Maverick,What was this movie trailer about?,"THE MOVIE IS ABOUT  BIKE ,CAR ,AEROPLANE",FAIL,Irrelevant That doesn't match the video content.
+2026-01-03 13:52:10,Top Gun: Maverick,What was this movie trailer about?,FDSRHGDRFH,FAIL,Gibberish Please type a meaningful answer.
+2026-01-03 14:00:13,Top Gun: Maverick,What was this movie trailer about?,RYGHERTH,ERROR,⚠️ Google Free Tier limit reached. Please wait 60 seconds.
+2026-01-03 14:03:01,Avengers: Endgame,What was this movie trailer about?,FCTFRDULF,ERROR,⚠️ Google Free Tier limit reached. Please wait 60 seconds.
+2026-01-03 14:17:32,The Batman (2022),What was this movie trailer about?,MOVIE IS ABOUT BATMAN,PASS,Good job.
+2026-01-03 14:17:47,The Batman (2022),What did you like specifically in this video?,I LIKE THE BIKE IN THE MOVIE,FAIL,Irrelevant That doesn't match the video content.
+2026-01-03 14:18:36,The Batman (2022),What did you like specifically in this video?,Bruce Wayne attends a funeral that is crashed by a car driving through the church,PASS,Good job.
+2026-01-03 14:18:58,The Batman (2022),What was the most memorable scene?,FDJNHDFH,FAIL,Gibberish Please type a meaningful answer.
+2026-01-03 14:21:01,The Batman (2022),What was the most memorable scene?,EVERYTHING  FROM TOP TO BOTTOM ,PASS,Good job.
