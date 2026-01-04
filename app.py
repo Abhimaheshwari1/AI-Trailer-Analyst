@@ -5,18 +5,17 @@ import csv
 import os
 from datetime import datetime
 
-# ==========================================
-#  SECURE API KEY CONFIGURATION
-# ==========================================
+
+
 try:
-    # Tries to get key from secrets file
+   
     GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 except (FileNotFoundError, KeyError):
     st.error(" Missing API Key!")
     st.info("Please create a folder named .streamlit and a file named secrets.toml with GOOGLE_API_KEY='...'")
     st.stop()
 
-# Configure Google AI
+
 try:
     genai.configure(api_key=GOOGLE_API_KEY)
 except Exception as e:
@@ -25,9 +24,8 @@ except Exception as e:
 
 st.set_page_config(page_title="AI Video Interviewer", layout="centered")
 
-# ==========================================
-#  DATA: 10 TRAILERS (DETAILED CONTEXT & FIXED URLS)
-# ==========================================
+
+
 TRAILER_DB = [
     {
         "id": "batman",
@@ -224,30 +222,27 @@ QUESTIONS = [
     "What was the most memorable scene?"
 ]
 
-# ==========================================
-#  CSV LOGGING FUNCTION
-# ==========================================
+
 CSV_FILE_PATH = 'interview_data.csv'
 
 def log_to_csv(data_row):
     """Appends a row of data to the CSV file."""
-    # Check if file exists to see if headers are needed
+
     file_exists = os.path.exists(CSV_FILE_PATH)
     
     with open(CSV_FILE_PATH, 'a', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         if not file_exists:
-            # Write Header
+           
             writer.writerow(["Timestamp", "Trailer Title", "Question", "User Answer", "Status", "AI Feedback"])
-        # Write Data
+        
         writer.writerow(data_row)
 
-# ==========================================
-#  AI LOGIC (Grammar & Context Check)
-# ==========================================
+
+
 def validate_answer(user_answer, question, video_context, retry_count):
     
-    # 1. AUTO-DETECT MODEL
+   
     target_model_name = None
     try:
         for m in genai.list_models():
@@ -261,7 +256,7 @@ def validate_answer(user_answer, question, video_context, retry_count):
     except Exception as e:
         return {"status": "ERROR", "message": f"Connection Failed: {e}"}
 
-    # 2. PROMPT ENGINEERING
+
     prompt = f"""
     You are an AI Evaluator for a video comprehension test.
     
@@ -305,9 +300,9 @@ def validate_answer(user_answer, question, video_context, retry_count):
     except Exception as e:
         return {"status": "ERROR", "message": f"API Error: {str(e)}"}
 
-# ==========================================
-#  UI LOGIC
-# ==========================================
+
+
+
 if 'step' not in st.session_state:
     st.session_state.step = "start"
 if 'selected_trailer' not in st.session_state:
@@ -319,7 +314,6 @@ if 'chat_history' not in st.session_state:
 
 st.title(" AI Trailer Analyst")
 
-# STEP 1: START
 if st.session_state.step == "start":
     st.write("Click below to watch a random movie trailer.")
     if st.button("Start Assignment"):
@@ -327,7 +321,6 @@ if st.session_state.step == "start":
         st.session_state.step = "playing"
         st.rerun()
 
-# STEP 2: VIDEO
 elif st.session_state.step == "playing":
     trailer = st.session_state.selected_trailer
     st.subheader(f"Watching: {trailer['title']}")
@@ -338,7 +331,6 @@ elif st.session_state.step == "playing":
         st.session_state.step = 0
         st.rerun()
 
-# STEP 3: QUESTIONS
 elif isinstance(st.session_state.step, int):
     q_index = st.session_state.step
     current_q = QUESTIONS[q_index]
@@ -359,7 +351,7 @@ elif isinstance(st.session_state.step, int):
         with st.spinner("AI is analyzing grammar and logic..."):
             result = validate_answer(user_input, current_q, trailer_context, st.session_state.retry_count)
         
-        # --- SAVE TO CSV ---
+        
         log_data = [
             datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             st.session_state.selected_trailer['title'],
@@ -369,7 +361,7 @@ elif isinstance(st.session_state.step, int):
             result['message']
         ]
         log_to_csv(log_data)
-        # -------------------
+        
 
         if result['status'] == "ERROR":
             st.error(f" {result['message']}")
@@ -383,7 +375,7 @@ elif isinstance(st.session_state.step, int):
                 st.session_state.step = "end"
             st.rerun()
             
-        else: # FAIL
+        else: 
             if st.session_state.retry_count >= 2:
                 st.session_state.chat_history.append(("assistant", " Moving on due to repeated errors."))
                 st.session_state.retry_count = 0
