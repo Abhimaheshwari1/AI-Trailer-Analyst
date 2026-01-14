@@ -159,7 +159,7 @@ TRAILER_DB = [
         - Humans deploy advanced underwater drones to track the Na'vi.
         - A climactic scene shows Jake Sully leading an underwater ambush against human forces.
         
-        KEY OBJECTS: Water, Skimwings (flying fish mounts), Bow and Arrow, Mech Suits, Braided hair, Whales, Tree of Souls, Underwater drones.
+        KEY OBJECTS: Water,im good  boy Skimwings (flying fish mounts), Bow and Arrow, Mech Suits, Braided hair, Whales, Tree of Souls, Underwater drones.
         TONE: Visual spectacle, serene nature vs industrial war, emphasis on family protection, spiritual connection to nature, high-stakes action.
         """
     },
