@@ -153,10 +153,14 @@ TRAILER_DB = [
         - Hyper-realistic water physics and swimming scenes.
         - A large battle scene ensues with humans in crab-like mech suits fighting Na'vi on speedboats.
         - A village built on the water burns down.
-        - Jake Sully says, "This family is our fortress."
+        - Jake Sully says, \"This family is our fortress.\":
+        - The Na'vi perform a ceremonial dance under the glowing Tree of Souls.
+        - A young Na'vi learns to tame a Skimwing for the first time.
+        - Humans deploy advanced underwater drones to track the Na'vi.
+        - A climactic scene shows Jake Sully leading an underwater ambush against human forces.
         
-        KEY OBJECTS: Water, Skimwings (flying fish mounts), Bow and Arrow, Mech Suits, Braided hair, Whales.
-        TONE: Visual spectacle, serene nature vs industrial war, emphasis on family protection.
+        KEY OBJECTS: Water, Skimwings (flying fish mounts), Bow and Arrow, Mech Suits, Braided hair, Whales, Tree of Souls, Underwater drones.
+        TONE: Visual spectacle, serene nature vs industrial war, emphasis on family protection, spiritual connection to nature, high-stakes action.
         """
     },
     {
