@@ -156,7 +156,7 @@ TRAILER_DB = [
         - Jake Sully says, \"This family is our fortress.\":
         - The Na'vi perform a ceremonial dance under the glowing Tree of Souls.
         - A young Na'vi learns to tame a Skimwing for the first time.
-        - Humans deploy advanced underwater drones to track the Na'vi.
+        - Humans deploy cvcvcvcadvanced underwater drones to track the Na'vi.
         - A climactic scene shows Jake Sully leading an underwater ambush against human forces.
         
         KEY OBJECTS: Water,im good  boy Skimwings (flying fish mounts), Bow and Arrow, Mech Suits, Braided hair, Whales, Tree of Souls, Underwater drones.
